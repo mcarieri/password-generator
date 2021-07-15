@@ -1,16 +1,5 @@
 # password-generator
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN asked for character types to include in the password
-THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
+
+No better feeling than getting this working! My initial trouble began with simply where to start given the skeleton code. I started with the simplest task- which was declaring my variables. With some help from my tutor, Muhammad, I noticed some issues with my initial declaration, mainly including an empty universal password variable which unintentionally would cause my generated password to deleted itself upon running. My tutor also walked me through .concat statements, which proved essential in my writePassword function. I found these particularly interesting, and plan to explore .concat statements more independently.     
+
+The last issue I ran into involved the password not reseting whenever the generate button was clicked, which I found to be caused by the fact that I mislabeled my writePassword and generatePassword functions. This was a simple yet overlooked syntax error that was quickly fixed upon realization.
