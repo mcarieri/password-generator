@@ -25,7 +25,7 @@ function writePassword() {
       includeLower ? (characters = characters.concat(lowwerArray)) : "";
       includeNumber ? (characters = characters.concat(numArray)) : "";
       includeSpecial ? (characters = characters.concat(specialArray)) : "";
-      password = generatePassword(passwordLength, characters);
+      password = generatePassword(passwordLength, characters, password);
       var passwordText = document.querySelector("#password");
       passwordText.value = password;
     }
@@ -34,7 +34,7 @@ function writePassword() {
   };
 }
 
-var generatePassword = (length, characters) => {
+var generatePassword = (length, characters, password) => {
   for (let i = 0; i < length; i++){
     password = password.concat(characters[Math.floor(Math.random() * characters.length)]) 
   } 
